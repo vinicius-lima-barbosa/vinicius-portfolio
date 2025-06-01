@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 @import 'tailwindcss';
 
 * {
@@ -9,6 +10,8 @@
 @font-face {
   font-family: 'Star Jedi';
   src: url('/fonts/Starjedi.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 html,
@@ -17,7 +20,7 @@ body {
 }
 
 body {
-  font-family: 'Star Jedi', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
   color: #f8fafc;
 }
