@@ -90,6 +90,10 @@
     animation: lightsaber-glow 0.2s infinite;
   }
 
+  .text-sith-red {
+    color: #dc143c;
+  }
+
   .text-glow {
     text-shadow:
       0 0 8px #dc143c,
