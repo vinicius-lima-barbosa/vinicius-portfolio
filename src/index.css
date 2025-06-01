@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Star Jedi';
+  src: url('/fonts/Starjedi.ttf') format('truetype');
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Star Jedi', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #f8fafc;
+}
