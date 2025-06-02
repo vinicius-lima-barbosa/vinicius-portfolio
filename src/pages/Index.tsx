@@ -1,14 +1,12 @@
+import HeroSection from '../components/hero-section';
 import Navigation from '../components/navigation';
 
 const Index = () => {
   return (
     <>
       <Navigation />
+      <HeroSection />
       <main>
-        <section id="home" className="pt-20 min-h-screen bg-black text-white">
-          <h2 className="text-4xl">Início</h2>
-        </section>
-
         <section
           id="about"
           className="pt-20 min-h-screen bg-gray-900 text-white"
