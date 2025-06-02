@@ -58,7 +58,7 @@ const Navigation = () => {
         <h1 className="font-starwars text-xl font-bold text-sith-red text-glow">
           IMPÉRIO.GALÁTICO.DEV
         </h1>
-        <div className="hidden md:flex gap-4">
+        <div className="hidden md:flex gap-2">
           {NAV_ITEMS.map((item) => (
             <button
               key={item.id}
