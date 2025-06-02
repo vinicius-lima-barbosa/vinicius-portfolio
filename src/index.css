@@ -210,6 +210,10 @@
   .rounded-sm {
     border-radius: calc(var(--radius) - 4px);
   }
+
+  .imperial-border {
+    @apply border border-[#dc143c]/30 bg-gradient-to-br from-[#2f2f2f]/50 to-[#000000]/80 backdrop-blur-[10px];
+  }
 }
 
 html,
