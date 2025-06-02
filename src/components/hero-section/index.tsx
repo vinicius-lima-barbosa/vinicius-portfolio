@@ -78,6 +78,28 @@ const HeroSection = () => {
           </button>
         </div>
       </div>
+
+      <img
+        width="50"
+        height="50"
+        src="https://img.icons8.com/ios/50/darth-vader.png"
+        alt="darth-vader"
+        className="absolute bottom-10 left-10 w-20 h-20 rotate-345 animate-float"
+      />
+      <img
+        width="50"
+        height="50"
+        src="https://img.icons8.com/ios/50/darth-vader.png"
+        alt="darth-vader"
+        className="absolute top-20 right-20 w-20 h-20 rotate-45 animate-float"
+      />
+      <img
+        width="50"
+        height="50"
+        src="https://img.icons8.com/ios/50/darth-vader.png"
+        alt="darth-vader"
+        className="absolute bottom-20 right-32 w-20 h-20 rotate-12 animate-float"
+      />
     </section>
   );
 };
