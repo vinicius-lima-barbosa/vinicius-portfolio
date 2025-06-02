@@ -47,7 +47,6 @@ const Navigation = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      console.log(element);
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
