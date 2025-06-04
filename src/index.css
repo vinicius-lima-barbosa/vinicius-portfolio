@@ -99,6 +99,14 @@
       0 0 8px #dc143c,
       0 0 16px #dc143c;
   }
+
+  .imperial-border {
+    @apply border border-[#dc143c]/30 bg-gradient-to-br from-[#2f2f2f]/50 to-[#000000]/80 backdrop-blur-[10px];
+  }
+
+  .hover\:imperial-border-hover:hover {
+    border-color: #dc143c;
+  }
 }
 
 @layer base {
@@ -209,10 +217,6 @@
 
   .rounded-sm {
     border-radius: calc(var(--radius) - 4px);
-  }
-
-  .imperial-border {
-    @apply border border-[#dc143c]/30 bg-gradient-to-br from-[#2f2f2f]/50 to-[#000000]/80 backdrop-blur-[10px];
   }
 
   .imperial-only-border {
