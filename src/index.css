@@ -172,6 +172,10 @@
     background-color: #9ca3af;
   }
 
+  .border-sith-red {
+    border-color: #dc143ca4;
+  }
+
   /* Animations */
   @keyframes lightsaber-glow {
     0%,
@@ -243,6 +247,6 @@ body {
 
 body {
   font-family: 'Rajdhani', sans-serif;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  background: #1a1a1a;
   color: #f8fafc;
 }
