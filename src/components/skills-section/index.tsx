@@ -85,7 +85,7 @@ const SkillsSection = () => {
                 {skill.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="inline-block bg-sith-gray text-empire-silver px-3 py-1 rounded-full mr-2 mb-2 text-sm font-medium transition-colors duration-300"
+                    className="inline-block bg-sith-gray hover:bg-sith-red-hover text-empire-silver hover:text-sith-red-hover px-3 py-1 rounded-full mr-2 mb-2 text-sm font-medium transition-colors duration-300"
                   >
                     {tech}
                   </span>

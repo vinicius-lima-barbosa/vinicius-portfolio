@@ -94,6 +94,10 @@
     color: #dc143c;
   }
 
+  .hover\:text-sith-red-hover:hover {
+    color: #dc143c;
+  }
+
   .text-glow {
     text-shadow:
       0 0 8px #dc143c,
@@ -106,6 +110,14 @@
 
   .hover\:imperial-border-hover:hover {
     border-color: #dc143c;
+  }
+
+  .bg-sith-red {
+    background-color: #dc143c;
+  }
+
+  .hover\:bg-sith-red-hover:hover {
+    background-color: #dc143c32;
   }
 }
 
