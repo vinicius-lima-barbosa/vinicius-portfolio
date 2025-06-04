@@ -15,7 +15,7 @@ const AboutSection = () => {
           {/* Div para o lado esquerdo */}
           <div className="space-y-6">
             {/* Div para o texto de about */}
-            <div className="imperial-border rounded-lg p-8">
+            <div className="imperial-border rounded-lg p-8 text-justify">
               <h3 className="text-2xl font-bold text-empire-silver mb-4">
                 A jornada para o lado negro
               </h3>
