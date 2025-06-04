@@ -53,7 +53,7 @@ const Navigation = () => {
 
   return (
     <header className="fixed top-0 z-30 w-full border-b imperial-border shadow-lg">
-      <nav className="max-w-screen-xl px-6 py-4 flex items-center justify-between">
+      <nav className="px-6 py-4 flex items-center justify-between">
         <h1 className="font-starwars text-xl font-bold text-sith-red text-glow">
           IMPÉRIO.GALÁTICO.DEV
         </h1>
