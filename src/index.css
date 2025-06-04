@@ -214,6 +214,10 @@
   .imperial-border {
     @apply border border-[#dc143c]/30 bg-gradient-to-br from-[#2f2f2f]/50 to-[#000000]/80 backdrop-blur-[10px];
   }
+
+  .imperial-only-border {
+    @apply border border-[#dc143c]/30;
+  }
 }
 
 html,
