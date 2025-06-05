@@ -119,6 +119,14 @@
   .hover\:bg-sith-red-hover:hover {
     background-color: #dc143c32;
   }
+
+  .group:hover .group-hover\:bg-sith-red-hover {
+    background-color: #dc143c32;
+  }
+
+  .border-sith-red-opacity {
+    border-color: #da103862;
+  }
 }
 
 @layer base {
@@ -176,6 +184,10 @@
     border-color: #dc143ca4;
   }
 
+  .focus\:border-sith-red:focus {
+    box-shadow: 0 0 0 2px #dc143c;
+  }
+
   /* Animations */
   @keyframes lightsaber-glow {
     0%,
@@ -212,6 +224,16 @@
     50% {
       transform: translateY(-10px);
     }
+  }
+
+  .from-sith-red {
+    --tw-gradient-from: #dc143c;
+    --tw-gradient-stops:
+      var(--tw-gradient-from), var(--tw-gradient-to, rgb(220 20 60 / 0));
+  }
+
+  .to-sith-darkred {
+    --tw-gradient-to: #8b0000;
   }
 
   .animate-fade-in-up {
