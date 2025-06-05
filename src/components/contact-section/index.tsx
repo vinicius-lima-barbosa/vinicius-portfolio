@@ -93,7 +93,7 @@ const ContactSection = () => {
               <h4 className="font-starwars text-lg font-bold text-sith-red mb-4">
                 "Sua Jornada Começa Aqui"
               </h4>
-              <p className="text-empire-silver leading-relaxed">
+              <p className="text-empire-silver leading-relaxed text-justify">
                 Pronto para transformar suas ideias em realidade? O lado negro
                 do desenvolvimento oferece poder ilimitado para seus projetos.
                 Entre em contato e descubra o que podemos conquistar juntos.
