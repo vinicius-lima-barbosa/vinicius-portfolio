@@ -49,7 +49,7 @@ const HeroSection = () => {
           </h1>
         </div>
 
-        <div className="mb-8 h-16 animate-fade-in-up">
+        <div className="mb-8 h-24 animate-fade-in-up">
           <h2 className="text-xl md:text-2xl lg:text-3xl text-empire-silver">
             {text}
             {isTyping && <span className="animate-pulse">|</span>}

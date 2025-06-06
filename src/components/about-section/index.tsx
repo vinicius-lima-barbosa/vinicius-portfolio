@@ -53,7 +53,7 @@ const AboutSection = () => {
 
           {/* Div para o lado direito */}
           <div className="relative">
-            <div className="imperial-border rounded-lg p-8 text-center">
+            <div className="imperial-border rounded-lg p-8 text-center grid justify-center">
               {/* Div para a imagem de perfil e citação */}
               <div className="w-80 h-80 mx-auto bg-gradient-to-br from-sith-gray to-sith-black rounded-full flex items-center justify-center mb-6 relative overflow-hidden">
                 <div className="absolute inset-4 border-2 imperial-border rounded-full animate-spin opacity-30" />
