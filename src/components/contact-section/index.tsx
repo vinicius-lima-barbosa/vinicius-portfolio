@@ -73,7 +73,7 @@ const ContactSection = () => {
                   </div>
                 </a>
                 <a
-                  href="#"
+                  href="https://api.whatsapp.com/send?phone=5583999640036"
                   target="blank"
                   className="flex items-center space-x-4 hover:text-sith-red-hover transition-colors duration-300 group"
                 >
