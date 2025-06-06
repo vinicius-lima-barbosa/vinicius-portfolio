@@ -1,54 +1,103 @@
-# React + TypeScript + Vite
+# 💼 Vinícius Lima Barbosa – Portfólio Pessoal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o repositório do meu portfólio pessoal, desenvolvido com o objetivo de apresentar minhas habilidades e experiências de forma interativa e responsiva.
 
-Currently, two official plugins are available:
+<!-- 👉 [Acesse o site ao vivo](https://vinicius-lima-barbosa\/vinicius-portfolio) -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React.js** – Criação da interface e controle do estado
+- **Tailwind CSS** – Estilização com CSS-in-JS
+- **AOS (Animate On Scroll)** – Animações baseadas no scroll
+- **EMAILJS/BROWSER** – Gerenciamento dos emails enviados
+- **React Hot Toast** – Toasts de Sucesso e Erro
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+---
+
+## 📁 Estrutura de Pastas
+
+```
+vinicius-portfolio/
+├── public/                 # Fontes, ícones e outros arquivos públicos
+│   └── fonts/
+│   └── logos/
+├── src/
+│   ├── assets/             # Profile Image
+│   ├── components/         # Componentes reutilizáveis
+│   ├── pages/              # Seções principais (Sobre, Projetos, Contato, etc.)
+│   ├── styles/             # Estilos globais e temas
+│   ├── App.js              # Componente principal
+│   ├── index.css           # Css principal
+│   └── main.js             # Ponto de entrada da aplicação
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧪 Como Executar Localmente
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+1. Clone este repositório:
+
+   ```bash
+   git clone https://github.com/vinicius-lima-barbosa/vinicius-portfolio.git
+   ```
+
+2. Acesse o diretório do projeto:
+
+   ```bash
+   cd vinicius-portfolio
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   # ou
+   yarn install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   npm run dev
+   # ou
+   yarn dev
+   ```
+
+5. Abra no navegador:
+   ```
+   http://localhost:3000
+   ```
+
+---
+
+## 📌 Funcionalidades
+
+- Layout 100% responsivo
+- Design moderno com animações ao rolar a página
+- Seções bem definidas: Sobre, Projetos, Contato
+- Cards interativos com projetos e links externos
+- Ícones sociais com acesso direto ao LinkedIn, GitHub e e-mail
+
+---
+
+## 📄 Licença
+
+Distribuído sob a licença MIT. Veja [`LICENSE`](LICENSE) para mais detalhes.
+
+---
+
+## 🙋‍♂️ Contato
+
+- **LinkedIn:** [linkedin.com/in/vinicius-lima-barbosa](https://www.linkedin.com/in/vinicius-lima-barbosa)
+- **GitHub:** [github.com/vinicius-lima-barbosa](https://github.com/vinicius-lima-barbosa)
+- **E-mail:** vinicius.lima@example.com
+
+---
+
+Feito com 💙 por **Vinícius Lima Barbosa** 🚀
