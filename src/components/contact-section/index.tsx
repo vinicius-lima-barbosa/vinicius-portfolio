@@ -1,6 +1,7 @@
 import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import React from 'react';
+import toast from 'react-hot-toast';
 
 const ContactSection: React.FC = () => {
   const formRef = React.useRef<HTMLFormElement | null>(null);
@@ -20,9 +21,21 @@ const ContactSection: React.FC = () => {
       .then(
         (result) => {
           console.log('Email sent succesfully:', result.text);
+          toast.success(
+            'Mensagem enviada com sucesso! O Lord Sith entrará em contato em breve.',
+            {
+              duration: 7000
+            }
+          );
         },
         (error) => {
           console.error('Error while sending Email:', error.text);
+          toast.error(
+            'Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.',
+            {
+              duration: 7000
+            }
+          );
         }
       );
   };
