@@ -86,17 +86,11 @@ vinicius-portfolio/
 
 ---
 
-## 📄 Licença
-
-Distribuído sob a licença MIT. Veja [`LICENSE`](LICENSE) para mais detalhes.
-
----
-
 ## 🙋‍♂️ Contato
 
-- **LinkedIn:** [linkedin.com/in/vinicius-lima-barbosa](https://www.linkedin.com/in/vinicius-lima-barbosa)
+- **LinkedIn:** [linkedin.com/in/vinicius-lima-barbosa](https://www.linkedin.com/in/vinicius-barbosa-7042b1297/)
 - **GitHub:** [github.com/vinicius-lima-barbosa](https://github.com/vinicius-lima-barbosa)
-- **E-mail:** vinicius.lima@example.com
+- **E-mail:** viniciusbarbosa0202@gmail.com
 
 ---
 
