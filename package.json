@@ -14,6 +14,7 @@
     "format:check": "prettier . --check"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "lucide-react": "^0.513.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

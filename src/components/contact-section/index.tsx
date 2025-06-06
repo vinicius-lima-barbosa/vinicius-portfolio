@@ -1,6 +1,32 @@
 import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import React from 'react';
 
-const ContactSection = () => {
+const ContactSection: React.FC = () => {
+  const formRef = React.useRef<HTMLFormElement | null>(null);
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formRef.current as HTMLFormElement,
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        }
+      )
+      .then(
+        (result) => {
+          console.log('Email sent succesfully:', result.text);
+        },
+        (error) => {
+          console.error('Error while sending Email:', error.text);
+        }
+      );
+  };
+
   return (
     <section
       id="contact"
@@ -107,11 +133,14 @@ const ContactSection = () => {
               Envie uma mensagem para o Lord Sith
             </h3>
 
-            <form className="space-y-6">
+            <form ref={formRef} className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-empire-silver mb-2">Nome</label>
                 <input
+                  id="name"
+                  name="name"
                   type="text"
+                  required
                   className="w-full bg-sith-gray border border-sith-red-opacity rounded-lg px-4 py-3 text-empire-silver focus:border-sith-red focus:outline-none duration-200"
                   placeholder="Seu nome"
                 />
@@ -119,7 +148,10 @@ const ContactSection = () => {
               <div>
                 <label className="block text-empire-silver mb-2">Email</label>
                 <input
+                  id="reply_to"
+                  name="reply_to"
                   type="text"
+                  required
                   className="w-full bg-sith-gray border border-sith-red-opacity rounded-lg px-4 py-3 text-empire-silver focus:border-sith-red focus:outline-none duration-200"
                   placeholder="seu@email.com"
                 />
@@ -129,7 +161,10 @@ const ContactSection = () => {
                   Mensagem
                 </label>
                 <textarea
+                  id="message"
+                  name="message"
                   rows={5}
+                  required
                   className="w-full bg-sith-gray border border-sith-red-opacity rounded-lg px-4 py-3 text-empire-silver focus:border-sith-red focus:outline-none duration-200 resize-none"
                   placeholder="Conte-me sobre se projeto..."
                 />
