@@ -73,7 +73,6 @@ const ContactSection: React.FC = () => {
 
               <div className="space-y-6">
                 <a
-                  href="viniciusbarbosa0202@gmail.com"
                   target="blank"
                   className="flex items-center space-x-4 hover:text-sith-red-hover transition-colors duration-300 group"
                 >
