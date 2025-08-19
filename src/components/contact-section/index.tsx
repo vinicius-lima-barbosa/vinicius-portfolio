@@ -178,7 +178,7 @@ const ContactSection: React.FC = () => {
                   rows={5}
                   required
                   className="w-full bg-sith-gray border border-sith-red-opacity rounded-lg px-4 py-3 text-empire-silver focus:border-sith-red focus:outline-none duration-200 resize-none"
-                  placeholder="Conte-me sobre se projeto..."
+                  placeholder="Conte-me sobre seu projeto..."
                 />
               </div>
 
