@@ -5,6 +5,7 @@ import Footer from '../components/footer';
 import HeroSection from '../components/hero-section';
 import Navigation from '../components/navigation';
 import SkillsSection from '../components/skills-section';
+import ExperienceSection from '../components/experience-section';
 
 const Index = () => {
   return (
@@ -13,6 +14,7 @@ const Index = () => {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
+      <ExperienceSection />
       <ContactSection />
       <Footer />
       <Toaster position="bottom-right" />
