@@ -1,0 +1,101 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experiences": "Experience",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "DARTH VINÍCIUS BARBOSA",
+    "subtitle": "The Dark Side of Software Development is a pathway to many abilities some consider to be... unnatural.",
+    "description": "\"Your lack of faith in your programming skills is... disturbing. But together, we shall master the dark side of code.\"",
+    "button": "Join the Empire"
+  },
+  "about": {
+    "title": "About the Sith Lord",
+    "subtitle": "Know the power behind the code",
+    "journeyTitle": "The journey to the dark side",
+    "description1": "Just as Anakin Skywalker became Darth Vader, my journey in development began with curiosity and evolved into an obsessive passion for code perfection.",
+    "description2": "I master the dark arts of JavaScript, React, and TypeScript. My thirst for knowledge is insatiable, and my dedication to projects is absolute.",
+    "description3": "\"Fear leads to anger, anger leads to hate, and hate leads to perfect code.\"",
+    "yearsExperience": "Years of Experience",
+    "projectsConquered": "Projects Conquered",
+    "quote": "\"You do not know the power of the dark side...\"",
+    "masterDescription": "Master at transforming ideas into digital reality, using the power of the dark side of programming.",
+    "skills": {
+      "frontend": "Frontend Development",
+      "backend": "Backend Development",
+      "mobile": "Mobile Development",
+      "cloud": "Cloud Solutions"
+    },
+    "mission": "My mission is to use the power of the dark side of programming to create innovative solutions that dominate the digital galaxy.",
+    "button": "Explore Skills"
+  },
+  "skills": {
+    "title": "Dark Side Powers",
+    "subtitle": "\"Your destiny is sealed. Your technical abilities, now complete.\"",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "cloud": "Cloud",
+      "database": "Database",
+      "tools": "Tools"
+    },
+    "quote": "\"The power of the Force is Unlimited\"",
+    "description": "Always seeking new knowledge and technologies to strengthen my arsenal. The journey to the dark side never ends, nor does my learning."
+  },
+  "experiences": {
+    "title": "Imperial Journey",
+    "subtitle": "Experiences that shaped the Sith programmer",
+    "nordsol": {
+      "title": "Nordsol Patos",
+      "role": "Full Stack Developer",
+      "description": "Together with my empire, we are developing the company's client referral system.",
+      "date": "Jun 2025 - Today"
+    },
+    "sun4": {
+      "title": "Sun4",
+      "role": "Frontend Developer",
+      "description": "Together with the Galactic Judicial Emperor, we developed and improved the system interface.",
+      "date": "Jul 2025 - Today"
+    }
+  },
+  "contact": {
+    "title": "Join the Dark Side",
+    "subtitle": "Ready to dominate the digital galaxy with me?",
+    "form": {
+      "title": "Send a message to the Lord Sith",
+      "name": "Your Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Your Email",
+      "emailPlaceholder": "Enter your email",
+      "message": "Your Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "button": "Send Message"
+    },
+    "channels": {
+      "title": "Communication Channels",
+      "email": "Imperial Email",
+      "location": "Imperial Github",
+      "linkedin": "Imperial Linkedin",
+      "whatsapp": "Imperial Whatsapp"
+    },
+    "action": {
+      "title": "Your journey starts here",
+      "description": "Ready to transform your ideas into reality? The dark side of development offers unlimited power for your projects. Get in touch and discover what we can achieve together."
+    },
+    "success": "Message sent successfully!",
+    "error": "Error sending message. Please try again."
+  },
+  "footer": {
+    "quote1": "The dark side of development has never been so powerful",
+    "rights": "All rights reserved to the dark side.",
+    "quote2": "May the force be with your projects"
+  },
+  "language": {
+    "portuguese": "Português",
+    "english": "English"
+  }
+}

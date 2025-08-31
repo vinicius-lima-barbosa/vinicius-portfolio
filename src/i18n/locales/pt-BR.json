@@ -1,0 +1,103 @@
+{
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "experiences": "Experiências",
+    "contact": "Contato"
+  },
+  "hero": {
+    "title": "DARTH VINÍCIUS BARBOSA",
+    "subtitle": "O Lado Negro do Desenvolvimento de Software é o caminho para muitas habilidades que alguns consideram... não naturais.",
+    "description": "\"Sua falta de fé em suas habilidades de programação é... perturbadora. Mas juntos, dominaremos o lado negro do código.\"",
+    "button": "Junte-se ao Império"
+  },
+  "about": {
+    "title": "Sobre o Lord Sith",
+    "subtitle": "Conheça o poder por trás do código",
+    "journeyTitle": "A jornada para o lado negro",
+    "description1": "Assim como Anakin Skywalker se tornou Darth Vader, minha jornada no desenvolvimento começou com curiosidade e evoluiu para uma paixão obsessiva pela perfeição do código.",
+    "description2": "Domino as artes sombrias do JavaScript, React, e TypeScript. Minha sede de conhecimento é insaciável, e minha dedicação aos projetos é absoluta.",
+    "description3": "\"O medo leva à raiva, a raiva ao ódio leva e o ódio leva ao código perfeito.\"",
+    "yearsExperience": "Anos de Experiência",
+    "projectsConquered": "Projetos Conquistados",
+    "quote": "\"Você não conhece o poder do lado negro...\"",
+    "masterDescription": "Mestre em transformar ideias em realidade digital, usando o poder do lado negro da programação.",
+    "skills": {
+      "frontend": "Desenvolvimento Frontend",
+      "backend": "Desenvolvimento Backend",
+      "mobile": "Desenvolvimento Mobile",
+      "cloud": "Soluções em Nuvem"
+    },
+    "mission": "Minha missão é usar o poder do lado negro da programação para criar soluções inovadoras que dominam a galáxia digital.",
+    "button": "Explorar Habilidades"
+  },
+  "skills": {
+    "title": "Poderes do Lado Negro",
+    "subtitle": "\"Seu destino está selado. Suas habilidades técnicas, agora completas.\"",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "mobile": "Mobile",
+      "cloud": "Nuvem",
+      "database": "Banco de Dados",
+      "tools": "Ferramentas"
+    },
+    "quote": "\"O poder da Força é Ilimitado\"",
+    "description": "Sempre em busca de novos conhecimentos e tecnologias para fortalecer meu arsenal. A jornada para o lado negro nunca termina, e nem meu aprendizado."
+  },
+  "experiences": {
+    "title": "Jornada Imperial",
+    "subtitle": "Experiências que moldaram o Sith programador",
+    "nordsol": {
+      "title": "Nordsol Patos",
+      "role": "Desenvolvedor Full Stack",
+      "description": "Junto com meu império, estamos desenvolvendo o sistema de indicação de clientes da empresa.",
+      "date": "Jun 2025 - Atual"
+    },
+    "sun4": {
+      "title": "Sun4",
+      "role": "Desenvolvedor Frontend",
+      "description": "Junto com o imperador galático judicial, desenvolvemos e aprimoramos a interface do sistema.",
+      "date": "Jul 2025 - Atual",
+      "stack": ["React", "TypeScript", "Material UI"]
+    }
+  },
+  "contact": {
+    "title": "Una-se ao Lado Negro",
+    "subtitle": "Pronto para dominar a galáxia digital comigo?",
+    "form": {
+      "title": "Envie uma mensagem para o Lord Sith",
+      "name": "Seu Nome",
+      "namePlaceholder": "Digite seu nome",
+      "email": "Seu Email",
+      "emailPlaceholder": "Digite seu email",
+      "message": "Sua Mensagem",
+      "messagePlaceholder": "Conte-me sobre seu projeto...",
+      "button": "Enviar Mensagem"
+    },
+    "channels": {
+      "title": "Canais de Comunicação",
+      "email": "Email Imperial",
+      "location": "Github Imperial",
+      "linkedin": "Linkedin Imperial",
+      "whatsapp": "Whatsapp Imperial"
+    },
+    "action": {
+      "title": "Sua jornada começa aqui",
+      "description": "Pronto para transformar suas ideias em realidade? O lado negro do desenvolvimento oferece poder ilimitado para seus projetos. Entre em contato e descubra o que podemos alcançar juntos."
+    },
+
+    "success": "Mensagem enviada com sucesso!",
+    "error": "Erro ao enviar mensagem. Tente novamente."
+  },
+  "footer": {
+    "quote1": "O lado negro do desenvolvimento nunca foi tão poderoso",
+    "rights": "Todos os direitos reservados ao lado negro.",
+    "quote2": "Que a força esteja com seus projetos"
+  },
+  "language": {
+    "portuguese": "Português",
+    "english": "English"
+  }
+}
