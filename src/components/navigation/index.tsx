@@ -1,15 +1,18 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import LanguageSelector from './LanguageSelector';
 
 const NAV_ITEMS = [
-  { id: 'home', label: 'Início' },
-  { id: 'about', label: 'Sobre' },
-  { id: 'skills', label: 'Habilidades' },
-  { id: 'experiences', label: 'Experiências' },
-  { id: 'contact', label: 'Contato' }
+  { id: 'home', label: 'navigation.home' },
+  { id: 'about', label: 'navigation.about' },
+  { id: 'skills', label: 'navigation.skills' },
+  { id: 'experiences', label: 'navigation.experiences' },
+  { id: 'contact', label: 'navigation.contact' }
 ];
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const { t } = useTranslation();
 
   useEffect(() => {
     let scrollTimeout: number;
@@ -57,28 +60,32 @@ const Navigation = () => {
         <h1 className="font-starwars text-xl font-bold text-sith-red text-glow">
           IMPÉRIO.GALÁTICO.DEV
         </h1>
-        <div className="hidden md:flex gap-2">
-          {NAV_ITEMS.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => scrollToSection(item.id)}
-              className={`relative font-imperial font-medium tracking-wide px-3 py-2 transition-all duration-300 hover:cursor-pointer hover:[color:#dc143c] hover:tracking-widest ${
-                activeSection === item.id
-                  ? 'text-sith-red'
-                  : 'text-empire-silver'
-              }`}
-            >
-              {item.label}
-              <span
-                className={`absolute bottom-0 left-0 h-0.5 bg-sith-red transition-all duration-300 ${
+        <div className="flex items-center gap-4">
+          <div className="hidden md:flex gap-2">
+            {NAV_ITEMS.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => scrollToSection(item.id)}
+                className={`relative font-imperial font-medium tracking-wide px-3 py-2 transition-all duration-300 hover:cursor-pointer hover:[color:#dc143c] hover:tracking-widest ${
                   activeSection === item.id
-                    ? 'w-full animate-lightsaber-glow'
-                    : 'w-0'
+                    ? 'text-sith-red'
+                    : 'text-empire-silver'
                 }`}
-              />
-            </button>
-          ))}
+              >
+                {t(item.label)}
+                <span
+                  className={`absolute bottom-0 left-0 h-0.5 bg-sith-red transition-all duration-300 ${
+                    activeSection === item.id
+                      ? 'w-full animate-lightsaber-glow'
+                      : 'w-0'
+                  }`}
+                />
+              </button>
+            ))}
+          </div>
+
+          <LanguageSelector />
         </div>
       </nav>
     </header>

@@ -1,12 +1,14 @@
 import ProfileImage from '../../assets/my-image.jpeg';
+import { useTranslation } from 'react-i18next';
 
 const AboutSection = () => {
+  const { t } = useTranslation();
   return (
     <section id="about" className="py-20 px-6">
       <div className="container mx-auto max-w-5xl">
         <div className="text-center mb-12">
           <h2 className="font-starwars text-3xl md:text-5xl font-bold text-sith-red mb-6">
-            SOBRE O LORD SITH
+            {t('about.title')}
           </h2>
           <div className="w-32 h-1 bg-gradient-to-r from -transparent via-[#dc143c] to-transparent mx-auto" />
         </div>
@@ -17,21 +19,16 @@ const AboutSection = () => {
             {/* Div para o texto de about */}
             <div className="imperial-border rounded-lg p-8 text-justify">
               <h3 className="text-2xl font-bold text-empire-silver mb-4">
-                A jornada para o lado negro
+                {t('about.subtitle')}
               </h3>
               <p className="text-empire-silver/80 leading-relaxed mb-4">
-                Assim como Anakin Skywalker se tornou Darth Vader, minha jornada
-                no desenvolvimento começou com curiosidade e evoluiu para uma
-                paixão obsessiva pela perfeição do código.
+                {t('about.description1')}
               </p>
               <p className="text-empire-silver/80 leading-relaxed mb-4">
-                Domino as artes sombrias do JavaScript, React, e TypeScript.
-                Minha sede de conhecimento é insaciável, e minha dedicação aos
-                projetos é absoluta.
+                {t('about.description2')}
               </p>
               <p className="text-empire-silver/80 leading-relaxed mb-4">
-                "O medo leva à raiva, a raiva ao ódio leva e o ódio leva ao
-                código perfeito."
+                {t('about.description3')}
               </p>
             </div>
 
@@ -40,13 +37,13 @@ const AboutSection = () => {
               {/* Div para anos de experiência */}
               <div className="imperial-only-border rounded-lg p-4 text-center imperial-border">
                 <p className="text-3xl font-starwars text-sith-red mb-2">2+</p>
-                <p>Anos de Experiência</p>
+                <p>{t('about.yearsExperience')}</p>
               </div>
 
               {/* Div para quantidade de projetos */}
               <div className="imperial-only-border rounded-lg p-4 text-center imperial-border">
                 <p className="text-3xl font-starwars text-sith-red mb-2">8+</p>
-                <p>Projetos Conquistados</p>
+                <p>{t('about.projectsConquered')}</p>
               </div>
             </div>
           </div>
@@ -64,11 +61,10 @@ const AboutSection = () => {
                 />
               </div>
               <h4 className="font-imperial text-xl font-bold text-empire-silver mb-4">
-                "Você não conhece o poder do lado negro..."
+                {t('about.quote')}
               </h4>
               <p className="text-empire-silver/80 italic">
-                Mestre em transformar ideias em realidade digital, usando o
-                poder do lado negro da programação.
+                {t('about.masterDescription')}
               </p>
             </div>
           </div>

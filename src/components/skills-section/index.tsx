@@ -1,4 +1,5 @@
 import { Code, Database, Globe, Server } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const SKILLS_DATA = [
   {
@@ -47,17 +48,18 @@ const SKILLS_DATA = [
 ];
 
 const SkillsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section id="skills" className="py-20 px-6">
       <div className="container mx-auto max-w-5xl">
         {/* Div para título */}
         <div className="text-center mb-14">
           <h2 className="font-starwars text-3xl md:text-5xl font-bold text-sith-red mb-6">
-            PODERES DO LADO NEGRO
+            {t('skills.title')}
           </h2>
           <p className="text-xl text-empire-silver max-w-2xl mx-auto mb-4">
-            "Seu destino está selado. Suas habilidades técnicas, agora
-            completas."
+            {t('skills.subtitle')}
           </p>
           <div className="w-32 h-1 bg-gradient-to-r from -transparent via-[#dc143c] to-transparent mx-auto" />
         </div>
@@ -99,12 +101,10 @@ const SkillsSection = () => {
         <div className="mt-16 text-center">
           <div className="imperial-border rounded-lg p-8 max-w-2xl mx-auto">
             <h3 className="font-starwars text-2xl text-sith-red mb-4">
-              "O poder da Força é Ilimitado"
+              {t('skills.quote')}
             </h3>
             <p className="text-empire-silver leading-relaxed">
-              Sempre em busca de novos conhecimentos e tecnologias para
-              fortalecer meu arsenal. A jornada para o lado negro nunca termina,
-              e nem meu aprendizado.
+              {t('skills.description')}
             </p>
           </div>
         </div>

@@ -1,12 +1,17 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
+  const { t } = useTranslation();
+
   const [text, setText] = useState('');
-  const fullText =
-    'O Lado Negro do Desenvolvimento de Software é o caminho para muitas habilidades que alguns consideram... não naturais.';
   const [isTyping, setIsTyping] = useState(true);
+  const fullText = t('hero.subtitle');
 
   useEffect(() => {
+    setText('');
+    setIsTyping(true);
+
     let currentIndex = 0;
     const interval = setInterval(() => {
       if (currentIndex <= fullText.length) {
@@ -19,7 +24,7 @@ const HeroSection = () => {
     }, 100);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [fullText]);
 
   return (
     <section
@@ -58,8 +63,7 @@ const HeroSection = () => {
 
         <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
           <p className="font-imperial text-lg md:text-xl text-empire-silver/80 max-w-2xl mx-auto mb-8 leading-relaxed">
-            "Sua falta de fé em suas habilidades de programação é...
-            perturbadora. Mas juntos, dominaremos o lado negro do código."
+            {t('hero.description')}
           </p>
         </div>
 
@@ -72,7 +76,7 @@ const HeroSection = () => {
             }
             className="group relative px-8 py-4 font-imperial font-semibold text-lg bg-gradient-to-r from-[#dc143c] to-[#8b0000] text-white rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:cursor-pointer"
           >
-            <span className="relative z-10">Junte-se ao Império</span>
+            <span className="relative z-10">{t('hero.button')}</span>
             <div className="absolute inset-0 bg-gradient-to-r from-sith-darkred to-sith-red opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="absolute inset-0 animate-lightsaber-glow opacity-0 group-hover:opacity-100" />
           </button>
