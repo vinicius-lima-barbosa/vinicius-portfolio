@@ -15,7 +15,8 @@ const Footer = () => {
 
         <div className="border-t border-sith-red pt-6">
           <p className="text-empire-silver mt-2">
-            © 2025 Vinícius Barbosa - {t('footer.rights')}
+            © {new Date().getFullYear()} Vinícius Barbosa -{' '}
+            {t('footer.rights')}
           </p>
           <p className="text-empire-silver mt-2">"{t('footer.quote2')}"</p>
         </div>
