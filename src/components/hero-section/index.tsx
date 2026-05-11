@@ -1,30 +1,7 @@
-import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const HeroSection = () => {
   const { t } = useTranslation();
-
-  const [text, setText] = useState('');
-  const [isTyping, setIsTyping] = useState(true);
-  const fullText = t('hero.subtitle');
-
-  useEffect(() => {
-    setText('');
-    setIsTyping(true);
-
-    let currentIndex = 0;
-    const interval = setInterval(() => {
-      if (currentIndex <= fullText.length) {
-        setText(fullText.slice(0, currentIndex));
-        currentIndex++;
-      } else {
-        setIsTyping(false);
-        clearInterval(interval);
-      }
-    }, 100);
-
-    return () => clearInterval(interval);
-  }, [fullText]);
 
   return (
     <section
@@ -56,8 +33,7 @@ const HeroSection = () => {
 
         <div className="mb-8 h-24 animate-fade-in-up">
           <h2 className="text-xl md:text-2xl lg:text-3xl text-empire-silver">
-            {text}
-            {isTyping && <span className="animate-pulse">|</span>}
+            {t('hero.subtitle')}
           </h2>
         </div>
 
