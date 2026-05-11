@@ -6,8 +6,6 @@ const SKILLS_DATA = [
     category: 'Frontend',
     icon: <Globe className="w-8 h-8" />,
     technologies: [
-      'HTML',
-      'CSS',
       'JavaScript',
       'TypeScript',
       'React',
@@ -18,32 +16,17 @@ const SKILLS_DATA = [
   {
     category: 'Backend',
     icon: <Server className="w-8 h-8" />,
-    technologies: [
-      'Node.js',
-      'Express',
-      'Fastify',
-      'Golang',
-      'JavaScript',
-      'TypeScript'
-    ]
+    technologies: ['Node.js', 'Nest.js', 'Express', 'Golang', 'Spring Boot']
   },
   {
     category: 'Database',
     icon: <Database className="w-8 h-8" />,
-    technologies: ['MongoDB', 'PostgreSQL', 'MySQL', 'Supabase']
+    technologies: ['MongoDB', 'PostgreSQL', 'MySQL']
   },
   {
-    category: 'Tools',
+    category: 'Tools & DevOps',
     icon: <Code className="w-8 h-8" />,
-    technologies: [
-      'Git',
-      'Docker',
-      'Vscode',
-      'AWS',
-      'Vercel',
-      'Figma',
-      'Postman'
-    ]
+    technologies: ['Git', 'Docker', 'Azure DevOps', 'VPS Management', 'CI/CD']
   }
 ];
 

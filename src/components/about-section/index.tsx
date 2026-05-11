@@ -1,5 +1,5 @@
-import ProfileImage from '../../assets/my-image.jpeg';
 import { useTranslation } from 'react-i18next';
+import ProfileImage from '../../assets/my-image.jpeg';
 
 const AboutSection = () => {
   const { t } = useTranslation();
