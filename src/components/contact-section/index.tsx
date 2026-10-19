@@ -97,7 +97,7 @@ const ContactSection: React.FC = () => {
                   </div>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/vinicius-barbosa-7042b1297/"
+                  href="https://www.linkedin.com/in/vinicius-lima-barbosa/"
                   target="blank"
                   className="flex items-center space-x-4 hover:text-sith-red-hover transition-colors duration-300 group"
                 >
