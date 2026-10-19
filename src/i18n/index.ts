@@ -18,7 +18,7 @@ i18n
       }
     },
     fallbackLng: 'pt-BR',
-    lng: 'pt-BR',
+    supportedLngs: ['pt-BR', 'en-US'],
     interpolation: {
       escapeValue: false
     },
@@ -26,7 +26,12 @@ i18n
       order: ['localStorage', 'htmlTag', 'navigator'],
       caches: ['localStorage']
     },
-    debug: true
+    debug: false
   });
+
+document.documentElement.lang = i18n.resolvedLanguage || 'pt-BR';
+i18n.on('languageChanged', (language) => {
+  document.documentElement.lang = language;
+});
 
 export default i18n;

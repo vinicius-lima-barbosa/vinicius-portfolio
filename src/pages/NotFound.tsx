@@ -1,19 +1,22 @@
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+
 const NotFound = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404 - Not Found</h1>
-        <p className="text-xl font-['Star_jedi',_sans-serif] text-slate-200 mb-4">
-          The page you are looking for does not exist.
-        </p>
-        <a
-          href="/"
-          className="text-blue-400 font-['Star_jedi',_sans-serif] hover:text-blue-600"
-        >
-          Return the home page!
-        </a>
-      </div>
-    </div>
+    <main className="page-shell flex min-h-screen flex-col items-start justify-center py-24">
+      <p className="eyebrow mb-6">404 / {t('notFound.label')}</p>
+      <h1 className="hero-title max-w-2xl text-4xl font-semibold md:text-6xl">
+        {t('notFound.title')}
+      </h1>
+      <p className="mt-6 max-w-lg text-lg text-muted">
+        {t('notFound.description')}
+      </p>
+      <Link to="/" className="button-primary mt-8">
+        {t('notFound.button')} <span aria-hidden="true">↗</span>
+      </Link>
+    </main>
   );
 };
 

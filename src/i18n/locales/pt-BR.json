@@ -1,103 +1,140 @@
 {
   "navigation": {
+    "label": "Navegação principal",
     "home": "Início",
+    "projects": "Projetos",
+    "experiences": "Experiência",
     "about": "Sobre",
-    "skills": "Habilidades",
-    "experiences": "Experiências",
-    "contact": "Contato"
+    "contact": "Contato",
+    "open": "Abrir menu",
+    "close": "Fechar menu",
+    "homeLabel": "Vinícius Barbosa, início",
+    "skip": "Ir para o conteúdo"
   },
   "hero": {
-    "title": "DARTH VINÍCIUS BARBOSA",
-    "subtitle": "O Lado Negro do Desenvolvimento de Software é o caminho para muitas habilidades que alguns consideram... não naturais.",
-    "description": "\"Sua falta de fé em suas habilidades de programação é... perturbadora. Mas juntos, dominaremos o lado negro do código.\"",
-    "button": "Junte-se ao Império"
+    "role": "Desenvolvedor full stack",
+    "line1": "Código com propósito.",
+    "line2": "Soluções para o mundo real.",
+    "description": "Sou Vinícius Barbosa. Desenvolvo interfaces, sistemas web e automações, conectando tecnologia às necessidades de quem usa.",
+    "button": "Explorar projetos",
+    "production": "Em produção desde 2025",
+    "remote": "Experiência em equipes remotas",
+    "profile": "Por trás do código",
+    "signature": "Um pouco do lado negro. Muito código."
   },
-  "about": {
-    "title": "Sobre o Lord Sith",
-    "subtitle": "Conheça o poder por trás do código",
-    "journeyTitle": "A jornada para o lado negro",
-    "description1": "Assim como Anakin Skywalker se tornou Darth Vader, minha jornada no desenvolvimento começou com curiosidade e evoluiu para uma paixão obsessiva pela perfeição do código.",
-    "description2": "Domino as artes sombrias do JavaScript, React, e TypeScript. Minha sede de conhecimento é insaciável, e minha dedicação aos projetos é absoluta.",
-    "description3": "\"O medo leva à raiva, a raiva ao ódio leva e o ódio leva ao código perfeito.\"",
-    "yearsExperience": "Anos de Experiência",
-    "projectsConquered": "Projetos Profissionais Conquistados",
-    "quote": "\"Você não conhece o poder do lado negro...\"",
-    "masterDescription": "Mestre em transformar ideias em realidade digital, usando o poder do lado negro da programação.",
-    "skills": {
-      "frontend": "Desenvolvimento Frontend",
-      "backend": "Desenvolvimento Backend",
-      "mobile": "Desenvolvimento Mobile",
-      "cloud": "Soluções em Nuvem"
+  "projects": {
+    "label": "Trabalhos selecionados",
+    "title": "Da necessidade à entrega.",
+    "description": "Projetos profissionais em que contribuí com desenvolvimento, decisões técnicas e evolução do produto.",
+    "stack": "Tecnologias utilizadas",
+    "contribution": "Minha contribuição",
+    "result": "Entrega e impacto",
+    "support": {
+      "type": "Atendimento",
+      "title": "Atendimento conectado ao WhatsApp",
+      "context": "Uma plataforma própria de atendimento ao cliente, com automações para apoiar o fluxo de comunicação da Nordsol.",
+      "contribution": "Desenvolvi a aplicação com Next.js e Nest.js, integrei automações via n8n e conteinerizei a aplicação com Docker. Trabalhei em conjunto com UI/UX na experiência dos clientes e da equipe interna.",
+      "result": "A plataforma permitiu eliminar os gastos com softwares de terceiros utilizados no atendimento."
     },
-    "mission": "Minha missão é usar o poder do lado negro da programação para criar soluções inovadoras que dominam a galáxia digital.",
-    "button": "Explorar Habilidades"
-  },
-  "skills": {
-    "title": "Poderes do Lado Negro",
-    "subtitle": "\"Seu destino está selado. Suas habilidades técnicas, agora completas.\"",
-    "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "mobile": "Mobile",
-      "cloud": "Nuvem",
-      "database": "Banco de Dados",
-      "tools": "Ferramentas"
+    "referrals": {
+      "type": "Sistema web",
+      "title": "Indicações que viram oportunidades",
+      "context": "Um sistema de indicação de leads para apoiar a captação de clientes da Nordsol.",
+      "contribution": "Liderei o desenvolvimento com React, Node.js e PostgreSQL. Desenhei a arquitetura para acomodar novas regras de negócio e escrevi testes a cada nova funcionalidade.",
+      "result": "Entrega de um sistema próprio de indicações, com testes para apoiar a estabilidade e uma estrutura preparada para evolução."
     },
-    "quote": "\"O poder da Força é Ilimitado\"",
-    "description": "Sempre em busca de novos conhecimentos e tecnologias para fortalecer meu arsenal. A jornada para o lado negro nunca termina, e nem meu aprendizado."
+    "legal": {
+      "type": "Modernização",
+      "title": "Evolução de uma plataforma jurídica",
+      "context": "Uma plataforma de gestão jurídica da Sun4, com componentes legados e necessidade de evolução contínua.",
+      "contribution": "Atuei na refatoração com React e Next.js, implementei gerenciamento de estado com Zustand e contribuí com a padronização em TypeScript e code reviews.",
+      "result": "Também estruturei pipelines de CI/CD integrados ao GitHub, automatizando testes e deploys para reduzir o caminho entre desenvolvimento e produção."
+    }
   },
   "experiences": {
-    "title": "Jornada Imperial",
-    "subtitle": "Experiências que moldaram o Sith programador",
+    "label": "Trajetória",
+    "title": "Experiência que se constrói fazendo.",
+    "description": "Atuação em produtos reais, da construção de novas aplicações à evolução de sistemas existentes.",
+    "remote": "Remoto",
+    "current": "Atual",
     "nordsol": {
-      "title": "Nordsol Patos",
-      "role": "Desenvolvedor Full Stack",
-      "description": "Junto com meu império, estamos desenvolvendo o sistema de indicação de clientes da empresa.",
-      "date": "Jun 2025 - Atual"
+      "role": "Desenvolvedor full stack",
+      "start": "Mai 2025",
+      "description": "Desenvolvimento de sistemas de indicação e atendimento ao cliente. Atuação em arquitetura, frontend, backend, testes, automações e conteinerização."
     },
     "sun4": {
-      "title": "Sun4",
-      "role": "Desenvolvedor Frontend",
-      "description": "Junto com o imperador galático judicial, desenvolvemos e aprimoramos a interface do sistema.",
-      "date": "Jul 2025 - Jun 2026",
-      "stack": ["React", "TypeScript", "Material UI"]
+      "role": "Desenvolvedor frontend",
+      "start": "Jul 2025",
+      "end": "Abr 2026",
+      "description": "Refatoração de uma plataforma de gestão jurídica, gerenciamento de estado, padronização de componentes e automação de entregas com CI/CD."
+    }
+  },
+  "tagline": {
+    "label": "Como penso o desenvolvimento",
+    "line1": "Entender o problema.",
+    "line2": "Construir com propósito."
+  },
+  "about": {
+    "label": "Sobre mim",
+    "title": "Curiosidade para aprender. Cuidado para construir.",
+    "description": "Sou desenvolvedor full stack e estudante de Ciência da Computação na UEPB. Tenho experiência profissional com aplicações em produção e gosto de participar das decisões que conectam código, produto e necessidades reais.",
+    "approach": "Trabalho com foco em manutenção, testes e colaboração. Também utilizo LLMs no dia a dia para apoiar o desenvolvimento, mantendo a revisão e as decisões técnicas sob minha responsabilidade.",
+    "educationLabel": "Formação",
+    "degree": "Bacharelado em Ciência da Computação",
+    "university": "Universidade Estadual da Paraíba",
+    "educationDate": "2022 a 2026 · Em andamento, conclusão prevista em dezembro",
+    "languageLabel": "Idiomas",
+    "english": "Inglês B2",
+    "englishDescription": "Boa leitura, escrita e comunicação verbal, com experiência em entrevistas em inglês."
+  },
+  "skills": {
+    "title": "Tecnologias na prática",
+    "description": "Ferramentas utilizadas nos trabalhos apresentados.",
+    "categories": {
+      "frontend": "Interfaces",
+      "backend": "Backend e banco de dados",
+      "delivery": "Entregas e automações"
     }
   },
   "contact": {
-    "title": "Una-se ao Lado Negro",
-    "subtitle": "Pronto para dominar a galáxia digital comigo?",
-    "form": {
-      "title": "Envie uma mensagem para o Lord Sith",
-      "name": "Seu Nome",
-      "namePlaceholder": "Digite seu nome",
-      "email": "Seu Email",
-      "emailPlaceholder": "Digite seu email",
-      "message": "Sua Mensagem",
-      "messagePlaceholder": "Conte-me sobre seu projeto...",
-      "button": "Enviar Mensagem"
-    },
+    "label": "Vamos conversar",
+    "title": "Seu próximo projeto pode começar com uma conversa.",
+    "description": "Para conversar sobre uma oportunidade profissional, um projeto ou trocar experiências, escolha um dos canais abaixo ou envie uma mensagem.",
     "channels": {
-      "title": "Canais de Comunicação",
-      "email": "Email Imperial",
-      "github": "Github Imperial",
-      "linkedin": "Linkedin Imperial",
-      "whatsapp": "Whatsapp Imperial"
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github": "GitHub",
+      "whatsapp": "WhatsApp"
     },
-    "action": {
-      "title": "Sua jornada começa aqui",
-      "description": "Pronto para transformar suas ideias em realidade? O lado negro do desenvolvimento oferece poder ilimitado para seus projetos. Entre em contato e descubra o que podemos alcançar juntos."
+    "form": {
+      "title": "Conte o que você tem em mente",
+      "name": "Nome",
+      "namePlaceholder": "Como posso te chamar?",
+      "email": "Email",
+      "emailPlaceholder": "voce@exemplo.com",
+      "message": "Mensagem",
+      "messagePlaceholder": "Conte sobre a oportunidade ou o projeto...",
+      "button": "Enviar mensagem",
+      "sending": "Enviando mensagem..."
     },
-
-    "success": "Mensagem enviada com sucesso!",
-    "error": "Erro ao enviar mensagem. Tente novamente."
+    "sending": "Sua mensagem está sendo enviada.",
+    "success": "Mensagem enviada. Obrigado pelo contato.",
+    "error": "Não foi possível enviar a mensagem. Tente novamente ou",
+    "fallback": "entre em contato por email."
   },
   "footer": {
-    "quote1": "O lado negro do desenvolvimento nunca foi tão poderoso",
-    "rights": "Todos os direitos reservados ao lado negro.",
-    "quote2": "Que a força esteja com seus projetos"
+    "signature": "Que a força esteja com seus projetos.",
+    "top": "Voltar ao início"
   },
   "language": {
+    "select": "Idioma",
     "portuguese": "Português",
     "english": "English"
+  },
+  "notFound": {
+    "label": "Fora da órbita",
+    "title": "Esta página ficou em outra galáxia.",
+    "description": "O endereço que você acessou não existe. Volte ao portfólio para conhecer meu trabalho.",
+    "button": "Voltar ao portfólio"
   }
 }

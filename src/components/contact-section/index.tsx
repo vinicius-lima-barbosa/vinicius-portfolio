@@ -1,201 +1,187 @@
-import { Github, Linkedin, Mail, MessageCircle } from 'lucide-react';
-import emailjs from '@emailjs/browser';
-import React from 'react';
-import toast from 'react-hot-toast';
+import { useRef, useState } from 'react';
+import type { FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
 
-const ContactSection: React.FC = () => {
-  const formRef = React.useRef<HTMLFormElement | null>(null);
+const CONTACTS = [
+  {
+    id: 'email',
+    label: 'viniciusbarbosa0202@gmail.com',
+    href: 'mailto:viniciusbarbosa0202@gmail.com',
+    external: false
+  },
+  {
+    id: 'linkedin',
+    label: 'Vinícius Barbosa',
+    href: 'https://www.linkedin.com/in/vinicius-lima-barbosa',
+    external: true
+  },
+  {
+    id: 'github',
+    label: '@vinicius-lima-barbosa',
+    href: 'https://github.com/vinicius-lima-barbosa',
+    external: true
+  },
+  {
+    id: 'whatsapp',
+    label: '+55 (83) 99964-0036',
+    href: 'https://wa.me/5583999640036',
+    external: true
+  }
+];
+
+const ContactSection = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<
+    'idle' | 'sending' | 'success' | 'error'
+  >('idle');
   const { t } = useTranslation();
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    if (!formRef.current || status === 'sending') return;
+    setStatus('sending');
 
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        formRef.current as HTMLFormElement,
-        {
-          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        }
-      )
-      .then(
-        (result) => {
-          console.log('Email sent succesfully:', result.text);
-          toast.success(t('contact.success'), {
-            duration: 7000
-          });
-        },
-        (error) => {
-          console.error('Error while sending Email:', error.text);
-          toast.error(t('contact.error'), {
-            duration: 7000
-          });
-        }
-      );
+    try {
+      const service = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const template = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+      if (!service || !template || !publicKey)
+        throw new Error('Email service unavailable');
+      await emailjs.sendForm(service, template, formRef.current, { publicKey });
+      formRef.current?.reset();
+      setStatus('success');
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
-    <section
-      id="contact"
-      className="py-20 px-6 bg-gradient-to-b"
-      style={{
-        backgroundImage: 'linear-gradient(to bottom right, #1a1a1a, #0a0a0a)'
-      }}
-    >
-      <div className="container mx-auto max-w-4xl">
-        {/* Div para Call to Action */}
-        <div className="text-center mb-12">
-          <h2 className="font-starwars text-3xl md:text-5xl font-bold text-sith-red mb-6">
-            {t('contact.title')}
-          </h2>
-          <p className="text-xl text-empire-silver max-w-2xl mx-auto mb-4">
-            {t('contact.subtitle')}
+    <section id="contact" className="section-space border-t border-line">
+      <div className="page-shell grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <p className="eyebrow mb-4">04 / {t('contact.label')}</p>
+          <h2 className="section-title">{t('contact.title')}</h2>
+          <p className="mt-6 max-w-lg text-base text-muted">
+            {t('contact.description')}
           </p>
-          <div className="w-32 h-1 bg-gradient-to-r from -transparent via-[#dc143c] to-transparent mx-auto" />
-        </div>
-
-        {/* Div para Formas de Contato e o Formulário */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Div Lado Esquerdo */}
-          <div className="space-y-8 text-empire-silver">
-            {/* Div para os canais de comunicação */}
-            <div className="imperial-border rounded-lg p-8">
-              <h3 className="font-starwars text-2xl font-bold mb-6">
-                {t('contact.channels.title')}
-              </h3>
-
-              <div className="space-y-6">
-                <a
-                  target="blank"
-                  className="flex items-center space-x-4 hover:text-sith-red-hover transition-colors duration-300 group"
-                >
-                  <div className="w-12 h-12 bg-sith-gray rounded-lg flex items-center justify-center group-hover:bg-sith-red-hover transition-colors duration-300">
-                    <Mail className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h6 className="font-semibold">
-                      {t('contact.channels.email')}
-                    </h6>
-                    <p>viniciusbarbosa0202@gmail.com</p>
-                  </div>
-                </a>
-                <a
-                  href="https://github.com/vinicius-lima-barbosa"
-                  target="blank"
-                  className="flex items-center space-x-4 hover:text-sith-red-hover transition-colors duration-300 group"
-                >
-                  <div className="w-12 h-12 bg-sith-gray rounded-lg flex items-center justify-center group-hover:bg-sith-red-hover transition-colors duration-300">
-                    <Github className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h6 className="font-semibold">
-                      {t('contact.channels.github')}
-                    </h6>
-                    <p>@vinicius-lima-barbosa</p>
-                  </div>
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/vinicius-lima-barbosa/"
-                  target="blank"
-                  className="flex items-center space-x-4 hover:text-sith-red-hover transition-colors duration-300 group"
-                >
-                  <div className="w-12 h-12 bg-sith-gray rounded-lg flex items-center justify-center group-hover:bg-sith-red-hover transition-colors duration-300">
-                    <Linkedin className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h6 className="font-semibold">
-                      {t('contact.channels.linkedin')}
-                    </h6>
-                    <p>Vinícius Barbosa</p>
-                  </div>
-                </a>
-                <a
-                  href="https://api.whatsapp.com/send?phone=5583999640036"
-                  target="blank"
-                  className="flex items-center space-x-4 hover:text-sith-red-hover transition-colors duration-300 group"
-                >
-                  <div className="w-12 h-12 bg-sith-gray rounded-lg flex items-center justify-center group-hover:bg-sith-red-hover transition-colors duration-300">
-                    <MessageCircle className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h6 className="font-semibold">
-                      {t('contact.channels.whatsapp')}
-                    </h6>
-                    <p>+55 (83) 99964-0036</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            {/* Div para Call to Action */}
-            <div className="imperial-border rounded-lg p-8">
-              <h4 className="font-starwars text-lg font-bold text-sith-red mb-4">
-                {t('contact.action.title')}
-              </h4>
-              <p className="text-empire-silver leading-relaxed text-justify">
-                {t('contact.action.description')}
-              </p>
-            </div>
-          </div>
-
-          {/* Div Lado Direito */}
-          <div className="imperial-border rounded-lg p-8">
-            <h3 className="font-starwars text-2xl font-bold text-empire-silver mb-6">
-              {t('contact.form.title')}
-            </h3>
-
-            <form ref={formRef} className="space-y-6" onSubmit={handleSubmit}>
-              <div>
-                <label className="block text-empire-silver mb-2">
-                  {t('contact.form.name')}
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  className="w-full bg-sith-gray border border-sith-red-opacity rounded-lg px-4 py-3 text-empire-silver focus:border-sith-red focus:outline-none duration-200"
-                  placeholder={t('contact.form.namePlaceholder')}
-                />
-              </div>
-              <div>
-                <label className="block text-empire-silver mb-2">
-                  {t('contact.form.email')}
-                </label>
-                <input
-                  id="reply_to"
-                  name="reply_to"
-                  type="text"
-                  required
-                  className="w-full bg-sith-gray border border-sith-red-opacity rounded-lg px-4 py-3 text-empire-silver focus:border-sith-red focus:outline-none duration-200"
-                  placeholder={t('contact.form.emailPlaceholder')}
-                />
-              </div>
-              <div>
-                <label className="block text-empire-silver mb-2">
-                  {t('contact.form.message')}
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  required
-                  className="w-full bg-sith-gray border border-sith-red-opacity rounded-lg px-4 py-3 text-empire-silver focus:border-sith-red focus:outline-none duration-200 resize-none"
-                  placeholder={t('contact.form.messagePlaceholder')}
-                />
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-sith-red to-sith-darkred text-white font-semibold py-3 px-6 rounded-lg hover:scale-105 transition-all duration-300 animate-lightsaber-glow"
+          <div className="mt-8 space-y-4">
+            {CONTACTS.map((contact) => (
+              <a
+                key={contact.id}
+                href={contact.href}
+                target={contact.external ? '_blank' : undefined}
+                rel={contact.external ? 'noopener noreferrer' : undefined}
+                className="group flex min-w-0 items-center justify-between gap-4 rounded-lg border border-line p-4 transition-[background-color,border-color] duration-700 ease-fluid hover:border-sith-red/40 hover:bg-surface active:bg-surface-raised"
               >
-                {t('contact.form.button')}
-              </button>
-            </form>
+                <span className="min-w-0">
+                  <span className="mb-1 block text-xs text-muted">
+                    {t(`contact.channels.${contact.id}`)}
+                  </span>
+                  <span className="block break-all text-sm font-medium">
+                    {contact.label}
+                  </span>
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="text-muted transition-colors duration-700 ease-fluid group-hover:text-sith-red"
+                >
+                  ↗
+                </span>
+              </a>
+            ))}
           </div>
         </div>
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="panel p-6 md:p-8"
+        >
+          <h3 className="mb-8 text-xl font-semibold">
+            {t('contact.form.title')}
+          </h3>
+          <fieldset disabled={status === 'sending'} className="space-y-6">
+            <div>
+              <label htmlFor="name" className="mb-2 block text-sm font-medium">
+                {t('contact.form.name')}
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autoComplete="name"
+                required
+                maxLength={120}
+                className="form-field"
+                placeholder={t('contact.form.namePlaceholder')}
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="reply_to"
+                className="mb-2 block text-sm font-medium"
+              >
+                {t('contact.form.email')}
+              </label>
+              <input
+                id="reply_to"
+                name="reply_to"
+                type="email"
+                autoComplete="email"
+                required
+                maxLength={254}
+                className="form-field"
+                placeholder={t('contact.form.emailPlaceholder')}
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="message"
+                className="mb-2 block text-sm font-medium"
+              >
+                {t('contact.form.message')}
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                required
+                maxLength={5000}
+                className="form-field resize-y"
+                placeholder={t('contact.form.messagePlaceholder')}
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={status === 'sending'}
+              className="button-primary w-full"
+            >
+              {t(
+                status === 'sending'
+                  ? 'contact.form.sending'
+                  : 'contact.form.button'
+              )}
+              <span aria-hidden="true">↗</span>
+            </button>
+          </fieldset>
+          <div aria-live="polite" aria-atomic="true" className="mt-4 text-sm">
+            {status === 'sending' && (
+              <span className="text-muted">{t('contact.sending')}</span>
+            )}
+            {status === 'success' && <span>{t('contact.success')}</span>}
+            {status === 'error' && (
+              <p className="text-muted">
+                {t('contact.error')}{' '}
+                <a
+                  href="mailto:viniciusbarbosa0202@gmail.com"
+                  className="underline underline-offset-4"
+                >
+                  {t('contact.fallback')}
+                </a>
+              </p>
+            )}
+          </div>
+        </form>
       </div>
     </section>
   );

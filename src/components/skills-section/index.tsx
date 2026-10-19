@@ -1,95 +1,42 @@
-import { Code, Database, Globe, Server } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-const SKILLS_DATA = [
+const SKILLS = [
   {
-    category: 'Frontend',
-    icon: <Globe className="w-8 h-8" />,
-    technologies: [
-      'JavaScript',
-      'TypeScript',
-      'React',
-      'Next.js',
-      'Tailwind CSS'
-    ]
+    id: 'frontend',
+    technologies: ['React', 'Next.js', 'Angular', 'TypeScript']
   },
   {
-    category: 'Backend',
-    icon: <Server className="w-8 h-8" />,
-    technologies: ['Node.js', 'Nest.js', 'Express', 'Golang', 'Spring Boot']
+    id: 'backend',
+    technologies: ['Node.js', 'Nest.js', 'PostgreSQL', 'MongoDB']
   },
-  {
-    category: 'Database',
-    icon: <Database className="w-8 h-8" />,
-    technologies: ['MongoDB', 'PostgreSQL', 'MySQL']
-  },
-  {
-    category: 'Tools & DevOps',
-    icon: <Code className="w-8 h-8" />,
-    technologies: ['Git', 'Docker', 'Azure DevOps', 'VPS Management', 'CI/CD']
-  }
+  { id: 'delivery', technologies: ['Docker', 'n8n', 'z-api', 'Evolution API'] }
 ];
 
 const SkillsSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="skills" className="py-20 px-6">
-      <div className="container mx-auto max-w-5xl">
-        {/* Div para título */}
-        <div className="text-center mb-14">
-          <h2 className="font-starwars text-3xl md:text-5xl font-bold text-sith-red mb-6">
-            {t('skills.title')}
-          </h2>
-          <p className="text-xl text-empire-silver max-w-2xl mx-auto mb-4">
-            {t('skills.subtitle')}
-          </p>
-          <div className="w-32 h-1 bg-gradient-to-r from -transparent via-[#dc143c] to-transparent mx-auto" />
+    <section id="skills" className="pb-16 md:pb-24">
+      <div className="page-shell">
+        <div className="mb-8 flex flex-wrap items-baseline justify-between gap-4">
+          <h2 className="text-xl font-semibold">{t('skills.title')}</h2>
+          <p className="text-sm text-muted">{t('skills.description')}</p>
         </div>
-
-        {/* Div para habilidades */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {SKILLS_DATA.map((skill, index) => (
-            <div
-              key={skill.category}
-              className="imperial-border rounded-lg p-6 hover:imperial-border-hover hover:cursor-default transition-all duration-600 group"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Div para Icons e Categorias */}
-              <div className="flex items-center mb-4">
-                <div className="text-sith-red group-hover:animate-pulse">
-                  {skill.icon}
-                </div>
-                <h3 className="text-xl font-bold text-empire-silver ml-3">
-                  {skill.category}
-                </h3>
-              </div>
-
-              {/* Div para Tecnologias */}
-              <div className="grid grid-cols-3 text-center">
-                {skill.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="inline-block bg-sith-gray hover:bg-sith-red-hover text-empire-silver hover:text-sith-red-hover px-3 py-1 rounded-full mr-2 mb-2 text-sm font-medium transition-colors duration-300"
-                  >
-                    {tech}
-                  </span>
+        <div className="grid gap-6 md:grid-cols-3">
+          {SKILLS.map((skill) => (
+            <div key={skill.id} className="panel p-6">
+              <h3 className="mb-4 text-base font-semibold">
+                {t(`skills.categories.${skill.id}`)}
+              </h3>
+              <ul className="flex flex-wrap gap-2">
+                {skill.technologies.map((technology) => (
+                  <li key={technology} className="tag">
+                    {technology}
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
-        </div>
-
-        {/* Div para citação */}
-        <div className="mt-16 text-center">
-          <div className="imperial-border rounded-lg p-8 max-w-2xl mx-auto">
-            <h3 className="font-starwars text-2xl text-sith-red mb-4">
-              {t('skills.quote')}
-            </h3>
-            <p className="text-empire-silver leading-relaxed">
-              {t('skills.description')}
-            </p>
-          </div>
         </div>
       </div>
     </section>

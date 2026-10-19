@@ -1,85 +1,70 @@
 import { useTranslation } from 'react-i18next';
+import ProfileImage from '../../assets/my-image.jpeg';
 
 const HeroSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section
-      id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden"
-    >
-      <div className="absolute inset-0">
-        {[...Array(100)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute bg-white rounded-full opacity-20 animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              width: `${Math.random() * 3 + 1}px`,
-              height: `${Math.random() * 3 + 1}px`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${Math.random() * 3 + 2}s`
-            }}
-          />
-        ))}
-      </div>
-      <div className="text-center z-10 px-6">
-        <div className="mb-8 animate-fade-in-up">
-          <h1 className="font-starwars text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#dc143c] to-[#8b0000] mb-4">
-            DARTH VINÍCIUS BARBOSA
+    <section id="home" className="page-shell pb-16 pt-24 md:pb-24">
+      <div className="grid items-center gap-16 lg:grid-cols-[1.5fr_1fr]">
+        <div>
+          <p className="eyebrow mb-6 flex items-center gap-3">
+            <span className="h-2 w-2 rounded-full bg-sith-red" />
+            {t('hero.role')}
+          </p>
+          <h1 className="hero-title max-w-[680px] text-4xl font-semibold tracking-tight sm:text-5xl md:text-6xl">
+            {t('hero.line1')}
+            <br />
+            {t('hero.line2')}
           </h1>
-        </div>
-
-        <div className="mb-8 h-24 animate-fade-in-up">
-          <h2 className="text-xl md:text-2xl lg:text-3xl text-empire-silver">
-            {t('hero.subtitle')}
-          </h2>
-        </div>
-
-        <div className="animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-          <p className="font-imperial text-lg md:text-xl text-empire-silver/80 max-w-2xl mx-auto mb-8 leading-relaxed">
+          <p className="mt-8 max-w-[680px] text-lg text-muted">
             {t('hero.description')}
           </p>
+          <a className="button-primary mt-8" href="#projects">
+            {t('hero.button')} <span aria-hidden="true">↗</span>
+          </a>
+          <div className="mt-12 flex flex-wrap gap-x-8 gap-y-4 text-sm text-muted">
+            <span>{t('hero.production')}</span>
+            <span>{t('hero.remote')}</span>
+          </div>
         </div>
 
-        <div className="animate-fade-in-up" style={{ animationDelay: '0.7s' }}>
-          <button
-            onClick={() =>
-              document
-                .getElementById('about')
-                ?.scrollIntoView({ behavior: 'smooth' })
-            }
-            className="group relative px-8 py-4 font-imperial font-semibold text-lg bg-gradient-to-r from-[#dc143c] to-[#8b0000] text-white rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:cursor-pointer"
-          >
-            <span className="relative z-10">{t('hero.button')}</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-sith-darkred to-sith-red opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            <div className="absolute inset-0 animate-lightsaber-glow opacity-0 group-hover:opacity-100" />
-          </button>
+        <div className="relative mx-auto w-full max-w-sm">
+          <div className="panel relative overflow-hidden p-6 md:p-8">
+            <div className="mb-8 flex items-center justify-between">
+              <span className="eyebrow">{t('hero.profile')}</span>
+              <span className="text-xs text-muted" aria-hidden="true">
+                Vinícius Barbosa
+              </span>
+            </div>
+            <div className="relative mx-auto aspect-square w-full max-w-64">
+              <div className="portrait-orbit" aria-hidden="true" />
+              <img
+                src={ProfileImage}
+                alt="Vinícius Barbosa"
+                width={256}
+                height={256}
+                fetchPriority="high"
+                className="h-full w-full rounded-full object-cover p-4"
+              />
+            </div>
+            <div className="mt-8 text-center">
+              <p className="text-2xl font-semibold tracking-tight">
+                Vinícius Barbosa<span className="text-sith-red">.</span>
+              </p>
+              <p className="mt-2 text-sm text-muted">
+                React · Node.js · TypeScript
+              </p>
+            </div>
+            <div className="mt-8 flex items-center justify-between gap-4 border-t border-line pt-4 text-xs text-muted">
+              <span>{t('hero.signature')}</span>
+              <span className="text-sith-red" aria-hidden="true">
+                ✳
+              </span>
+            </div>
+          </div>
         </div>
       </div>
-
-      <img
-        width="50"
-        height="50"
-        src="https://img.icons8.com/ios/50/darth-vader.png"
-        alt="darth-vader"
-        className="absolute bottom-10 left-10 w-20 h-20 rotate-345 animate-float"
-      />
-      <img
-        width="50"
-        height="50"
-        src="https://img.icons8.com/ios/50/darth-vader.png"
-        alt="darth-vader"
-        className="absolute top-20 right-20 w-20 h-20 rotate-45 animate-float"
-      />
-      <img
-        width="50"
-        height="50"
-        src="https://img.icons8.com/ios/50/darth-vader.png"
-        alt="darth-vader"
-        className="absolute bottom-20 right-32 w-20 h-20 rotate-12 animate-float"
-      />
     </section>
   );
 };
